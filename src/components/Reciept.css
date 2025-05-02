@@ -38,4 +38,13 @@ p {
   margin-top: 0px;
   text-decoration: line-through;
   opacity: 50%;
+  font-size: 12px;
+}
+
+.pSaved {
+  text-align: right;
+  padding-right: 20px;
+  margin-top: 0px;
+  color: rgb(255, 89, 0);
+  font-size: 12px;
 }

@@ -23,6 +23,9 @@ function Reciept({ name, count, price }) {
       <p className="pDiscount">
         {count >= 5 ? "$" + (price * count).toFixed(2) : ""}
       </p>
+      <p className="pSaved">
+        {count >= 5 ? "Saved $" + (price * count * 0.2).toFixed(2) : ""}
+      </p>
     </div>
   );
 }
