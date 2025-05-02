@@ -9,10 +9,7 @@ function Counter() {
   const [discount, setDiscount] = useState(0);
   const [prevCount, setPrevCount] = useState([]);
   const [name, setName] = useState("Apple");
-  const [price, setPrice] = useState("2");
-
-  //   const name = "Banana";
-  // const price = 2.99;
+  const [price, setPrice] = useState(2);
 
   const handlePlus = () => {
     const sum = count + 1;
@@ -25,14 +22,6 @@ function Counter() {
   };
 
   const handleMinus = () => {
-    // First Solution
-    // const sum = count - 1;
-    // setCount(sum);
-    // if (sum < 5) {
-    //   setDiscount(0);
-    // }
-
-    // Second solution
     setCount((prevCount) => {
       const sum = prevCount - 1;
 
@@ -58,6 +47,10 @@ function Counter() {
 
   const handleChangePrice = (value) => {
     setPrice(value);
+    if (value < 0) {
+      alert("Please enter a positive number for the price!");
+      setPrice(0);
+    }
   };
 
   return (
@@ -76,13 +69,9 @@ function Counter() {
           placeholder="Enter Price"
         />
         <div className="divIncre">
-          {/* <h2>{name}</h2> */}
           <Button label="-" onClick={handleMinus} />
-          {/* <button onClick={handleMinus}>-</button> */}
           <span>{count}</span>
           <Button label="+" onClick={handlePlus} />
-          {/* <button onClick={handlePlus}>+</button> */}
-          {/* <h2>{`$ ${price}`} each</h2> */}
 
           <Button label="R" onClick={reset} />
         </div>
