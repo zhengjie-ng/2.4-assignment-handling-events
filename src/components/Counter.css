@@ -1,0 +1,29 @@
+.divWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  width: 300px;
+  background-color: rgb(241, 178, 133);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.divCounter {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  width: 90%;
+  padding: 10px;
+}
+
+.divIncre {
+  display: flex;
+  align-items: center;
+}
